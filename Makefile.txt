@@ -1,0 +1,10 @@
+postfiks: main.o kalkulator.o stos.o
+	g++ main.o kalkulator.o stos.o -o postfiks
+main.o: main.cpp
+	g++ -Wall -c main.cpp
+kalkulator.o: kalkulator.cpp kalkulator.h
+	g++ -Wall -c kalkulator.cpp
+stos.o: stos.cpp stos.h
+	g++ -Wall -c stos.cpp
+clean:
+	rm -f postfiks main.o kalkulator.o stos.o
